@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="km">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>SaveMoneyPlan · សន្សំប្រាក់រាល់ថ្ងៃ</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@400;600;800&display=swap"
+    />
+    <link rel="stylesheet" href="SaveLuy.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        💰 SaveMoneyPlan<small>សន្សំបន្តិច សុបិនធំ សម្រេចបានច្រើន</small>
+      </div>
+      <nav id="nav"></nav>
+      <button class="ghost" onclick="theme()" title="ពណ៌">🌓</button
+      ><button
+        class="ghost"
+        id="avx"
+        onclick="delAv()"
+        style="display: none; font-size: 13px"
+      >
+        លុបរូប</button
+      ><button
+        id="av"
+        class="avb"
+        onclick="document.getElementById('avf').click()"
+        title="ផ្លាស់ប្តូររូបភាពប្រវត្តិរូប"
+      ></button
+      ><input
+        id="avf"
+        type="file"
+        accept="image/*"
+        hidden
+        onchange="
+          upl(this.files[0]);
+          this.value = '';
+        "
+      />
+    </header>
+    <main id="app"></main>
+    <div id="nav2"></div>
+    <div id="toast"></div>
+    <div id="win">
+      <div class="card">
+        <div style="font-size: 60px">🎉</div>
+        <h2>អបអរសាទរ!</h2>
+        <p id="wm"></p>
+        <p class="mut">«ជំហានតូចៗរាល់ថ្ងៃ នាំទៅរកសមិទ្ធផលធំ»</p>
+        <button class="btn p" onclick="closeWin()">បន្ត</button>
+      </div>
+    </div>
+    <script src="SaveLuy.js"></script>
+  </body>
+</html>
